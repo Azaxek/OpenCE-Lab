@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
@@ -30,13 +29,32 @@ const App: React.FC = () => {
   const [selectedLabId, setSelectedLabId] = useState<string | null>(null);
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
 
+  // Sync state with URL path for SEO/Sitemap support
   useEffect(() => {
+    const path = window.location.pathname.replace('/', '') as View;
+    const validViews: View[] = ['pathway', 'lab', 'founder', 'community', 'start', 'contact'];
+    if (validViews.includes(path)) {
+      setView(path);
+    }
+
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Update URL when view changes (without full page reload)
+  const handleSetView = (newView: View) => {
+    if (newView !== 'lab-detail') setSelectedLabId(null);
+    if (newView !== 'project-story') setSelectedProjectId(null);
+    
+    setView(newView);
+    
+    // Update browser history for clean URL appearance
+    const path = newView === 'home' ? '/' : `/${newView}`;
+    window.history.pushState({}, '', path);
+  };
 
   // Scroll to top when view changes
   useEffect(() => {
@@ -46,17 +64,13 @@ const App: React.FC = () => {
   const navigateToLab = (labId: string) => {
     setSelectedLabId(labId);
     setView('lab-detail');
+    window.history.pushState({}, '', `/lab/${labId}`);
   };
 
   const navigateToProject = (projectId: string) => {
     setSelectedProjectId(projectId);
     setView('project-story');
-  };
-
-  const handleSetView = (newView: View) => {
-    if (newView !== 'lab-detail') setSelectedLabId(null);
-    if (newView !== 'project-story') setSelectedProjectId(null);
-    setView(newView);
+    window.history.pushState({}, '', `/project/${projectId}`);
   };
 
   const renderView = () => {

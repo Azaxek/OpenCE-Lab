@@ -1,10 +1,9 @@
-
 {
   "name": "opence-lab",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "mkdir -p build && esbuild index.tsx --bundle --outfile=build/index.js --format=esm --loader:.tsx=tsx --loader:.ts=ts --minify --platform=browser --external:react --external:react-dom --define:process.env.NODE_ENV=\\\"production\\\" && cp index.html build/ && sed -i 's/index.tsx/index.js/g' build/index.html"
+    "build": "mkdir -p build && esbuild index.tsx --bundle --outfile=build/index.js --format=esm --loader:.tsx=tsx --loader:.ts=ts --minify --platform=browser --external:react --external:react-dom --define:process.env.NODE_ENV=\\\"production\\\" && cp index.html sitemap.xml robots.txt build/ && sed -i 's/index.tsx/index.js/g' build/index.html"
   },
   "dependencies": {
     "react": "^19.0.0",
