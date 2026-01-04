@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { LAB_DATA } from '../data/labs';
 
@@ -231,10 +230,10 @@ export const LabDetailPage: React.FC<LabDetailPageProps> = ({ labId, onBack }) =
                   {showDebugger && (
                     <div className="mt-6 p-8 bg-slate-900 rounded-3xl text-blue-300 font-mono text-[10px] leading-relaxed space-y-4 border border-blue-500/30 animate-in slide-in-from-top-4 duration-300">
                       <p className="text-blue-500 font-bold tracking-widest">// DIAGNOSTIC_OVERRIDE_ENABLED</p>
-                      <p>> CHECK GROUND CONTINUITY (V_GND &lt; 0.1V)</p>
-                      <p>> VERIFY RESISTOR COLOR BANDS (OHMS_VAL_EXPECTED: {data.bom.find(b => b.includes('Ω'))})</p>
-                      <p>> MEASURE RAIL VOLTAGE: NOMINAL_VDC_EXPECTED</p>
-                      <p className="text-red-500">> WARNING: COMPONENT TEMP EXCEEDS SAFE_T_THRESHOLD?</p>
+                      <p>&gt; CHECK GROUND CONTINUITY (V_GND &lt; 0.1V)</p>
+                      <p>&gt; VERIFY RESISTOR COLOR BANDS (OHMS_VAL_EXPECTED: {data.bom.find(b => b.includes('Ω'))})</p>
+                      <p>&gt; MEASURE RAIL VOLTAGE: NOMINAL_VDC_EXPECTED</p>
+                      <p className="text-red-500">&gt; WARNING: COMPONENT TEMP EXCEEDS SAFE_T_THRESHOLD?</p>
                     </div>
                   )}
                 </div>
