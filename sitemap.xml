@@ -1,44 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://opence.lab/</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://opence.lab/pathway</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/pathway</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://opence.lab/lab</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/lab</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://opence.lab/founder</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/founder</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://opence.lab/community</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/community</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://opence.lab/start</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/start</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://opence.lab/contact</loc>
-    <lastmod>2025-01-24</lastmod>
+    <loc>https://opencelab.com/contact</loc>
+    <lastmod>2026-01-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
